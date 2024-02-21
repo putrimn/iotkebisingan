@@ -89,9 +89,15 @@ function getReadings() {
                 p = e.pengunjung;
 
             var rnd = Math.floor(Math.random() * 2);
-            if (rnd == 0) { pmBising.value = n +1; } else { pmBising.value = n - rnd; }
+            if (rnd == 0) { pmBising.value = n + 1; } else { pmBising.value = n - rnd; }
             pmTemp.value = a;
-            document.getElementById('pengunjung').innerHTML = p;
+            if (p >= 30) {
+                document.getElementById('pengunjung').innerHTML = "MAX";
+                document.getElementById('status').innerHTML = "PERPUS PENUH!";
+            } else {
+                document.getElementById('status').innerHTML = "NORMAL";
+                document.getElementById('pengunjung').innerHTML = p;
+            }
         }
     }, e.open("GET", "/data.json?_=" + new Date().getTime(), !0), e.send()
 }
