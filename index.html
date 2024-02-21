@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>PUTRI MINAWAROH | REALTIME REPORT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <h1>IOT DASHBOARD</h1>
+        <h2>Dinas Perpustakaan dan Arsip Kab. Tangerang</h2>
+    </div>
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title">KEBISINGAN</p>
+                <canvas id="kebisingan"></canvas>
+            </div>
+            <div class="card">
+                <p class="card-title">SUHU</p>
+                <canvas id="suhu-ruangan"></canvas>
+            </div>
+            <div class="card">
+                <p class="card-title">PENGUNJUNG</p>
+                <p class="pengunjung" id="pengunjung">...</p>
+                <p class="orang">orang</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="data-skripsi">
+            <h4>Implementasi Alat Pendeteksi Kebisingan pada Perpustakaan menggunakan Sensor SLM, DHT22 dan Infrared
+                berbasiskan Internet Of Things ( IOT )</h4>
+            <p>
+                <span style="padding-left:20px">Dosen Pembimbing I: <a
+                        href="https://scholar.google.co.id/citations?user=3BfOcJEAAAAJ&hl=id" target="_blank"><span
+                            class="foot">R. Tommy
+                            Gumelar, S.Kom., M.Kom.</span></a>
+                </span>
+            </p>
+            <p>
+                <span>
+                    Dosen Pembimbing II: <a href="https://scholar.google.co.id/citations?user=qIH6PckAAAAJ&hl=id"
+                        target="_blank"><span class="foot">Ir. Elliya Sestri, M.Kom.</span></a>
+                </span>
+            </p>
+            <p>
+                &copy; 2023 -
+                <script>
+                    now = new Date
+                    theYear = now.getYear()
+                    if (theYear < 1900)
+                        theYear = theYear + 1900
+                    document.write(theYear)
+                </script>
+                <span style="padding-left:20px"><a href="https://putri.cloud" target="_blank"><span class="foot">putri
+                            minawaroh</span>
+                    </a>
+                </span>
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
