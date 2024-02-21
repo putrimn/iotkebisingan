@@ -85,9 +85,12 @@ function getReadings() {
             var e = JSON.parse(this.responseText);
             console.log(e);
             var a = e.suhu,
-                n = e.kebisingan;
-            p = e.pengunjung;
-            pmTemp.value = a, pmBising.value = n;
+                n = e.kebisingan,
+                p = e.pengunjung;
+
+            var rnd = Math.floor(Math.random() * 2);
+            if (rnd == 0) { pmBising.value = n +1; } else { pmBising.value = n - rnd; }
+            pmTemp.value = a;
             document.getElementById('pengunjung').innerHTML = p;
         }
     }, e.open("GET", "/data.json?_=" + new Date().getTime(), !0), e.send()
