@@ -82,7 +82,8 @@ function getReadings() {
 
     e.onreadystatechange = function () {
         if (4 == this.readyState && 200 == this.status) {
-            var e = JSON.parse(this.responseText);
+            var da = JSON.parse(this.responseText);
+            var e = da.record;
             console.log(e);
             var a = e.suhu,
                 n = e.kebisingan,
@@ -99,7 +100,7 @@ function getReadings() {
                 document.getElementById('pengunjung').innerHTML = p;
             }
         }
-    }, e.open("GET", "/data.json?_=" + new Date().getTime(), !0), e.send()
+    }, e.open("GET", "https://api.jsonbin.io/v3/b/65d64a481f5677401f327fb0?_=" + new Date().getTime(), !0), e.setRequestHeader("X-Access-Key", "$2a$10$zzRxd4mZJSkD33qPKYM5eO9jHBXvLp0lsCKj4FAGIs2bKoSmSVE5u"), e.send()
 }
 
 window.setInterval(getReadings, 5000);
