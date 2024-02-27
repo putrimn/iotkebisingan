@@ -89,8 +89,9 @@ function getReadings() {
                 n = e.kebisingan,
                 p = e.pengunjung;
 
-            var rnd = Math.floor(Math.random() * 2);
-            if (rnd == 0) { pmBising.value = n + 1; } else { pmBising.value = n - rnd; }
+            /* var rnd = Math.floor(Math.random() * 2);
+            if (rnd == 0) { pmBising.value = n + 1; } else { pmBising.value = n - rnd; } */
+            pmBising.value = n;
             pmTemp.value = a;
             if (p >= 30) {
                 document.getElementById('pengunjung').innerHTML = "MAX";
